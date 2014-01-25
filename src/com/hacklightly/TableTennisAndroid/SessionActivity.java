@@ -20,14 +20,16 @@ import org.json.JSONObject;
 /**
  * Created by sameer on 1/24/2014.
  */
-public class SessionActivity extends Activity implements SensorEventListener, ConnectCallback, EventCallback, DisconnectCallback, ErrorCallback {
+public class SessionActivity extends Activity implements SensorEventListener, ConnectCallback,
+        EventCallback, DisconnectCallback, ErrorCallback {
+
     private SensorManager sensorMan;
     private Sensor accelerometer;
     private float[] mGravity;
     private float mAccel;
     private float mAccelCurrent;
     private float mAccelLast;
-    int n, nLast;
+    private int n, nLast;
 
     public static SocketIOClient S_CLIENT;
     public static String MY_ID;
