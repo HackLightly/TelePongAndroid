@@ -30,7 +30,8 @@ public class LaunchActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        TextView title = (TextView)findViewById(R.id.title), finePrint = (TextView)findViewById(R.id.finePrint);
+        TextView title = (TextView)findViewById(R.id.title), finePrint = (TextView)findViewById(R.id.finePrint),
+        info = (TextView)findViewById(R.id.info);
         Button scan = (Button)findViewById(R.id.qr_button),
                 about = (Button)findViewById(R.id.about_button);
 
@@ -40,6 +41,7 @@ public class LaunchActivity extends Activity implements View.OnClickListener{
         about.setTypeface(FONT);
         scan.setTypeface(FONT);
         finePrint.setTypeface(FONT);
+        info.setTypeface(FONT);
 
         scan.setOnClickListener(this);
         about.setOnClickListener(this);
