@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="zbar1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Libraries/ZBarScannerLibrary/libs/zbar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

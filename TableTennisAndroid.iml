@@ -15,8 +15,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="facebook" exported="" />
-    <orderEntry type="library" name="Parse-1.4.0" level="project" />
+    <orderEntry type="module" module-name="QrDroidServices" exported="" />
   </component>
 </module>
 

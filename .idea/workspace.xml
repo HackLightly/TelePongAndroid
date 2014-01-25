@@ -11,7 +11,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="test" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="myapp" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3434c644-371b-442f-980f-ee7769435510" name="Default" comment="" />
@@ -77,32 +77,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LaunchActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LaunchActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/LaunchActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="11" column="46" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="315">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/SessionActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="563" selection-end="563" vertical-scroll-proportion="0.1452206" vertical-offset="71" max-vertical-offset="1155">
-              <folding />
+            <state line="41" column="31" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.88235295" vertical-offset="135" max-vertical-offset="780">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,7 +91,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="33" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+            <state line="10" column="17" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="495">
               <folding />
             </state>
           </provider>
@@ -126,11 +107,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/SessionActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/session.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/ZBarScannerLibrary/src/com/dm/zbar/android/scanner/ZBarScannerActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/LocaleManager.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/camera/CameraConfigurationManager.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/DecodeFormatManager.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/history/HistoryManager.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/result/supplement/SupplementalInfoRetriever.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/encode/ContactEncoder.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/share/LoadPackagesAsyncTask.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/book/SearchBookContentsActivity.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/PreferencesFragment.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/DecodeThread.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/clipboard/ClipboardInterface.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/camera/AutoFocusManager.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/encode/VCardContactEncoder.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/result/supplement/BookResultInfoRetriever.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/ViewfinderView.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/HttpHelper.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/encode/QRCodeEncoder.java" />
+        <option value="$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/DecodeHintManager.java" />
         <option value="$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/LaunchActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/SessionActivity.java" />
       </list>
     </option>
   </component>
@@ -166,6 +166,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,14 +196,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TableTennisAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TableTennisAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TableTennisAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TableTennisAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QrDroidServices" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -215,10 +243,12 @@
     <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="AndroidTargetDevices" value="ad195878" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Resources/facebook-android-sdk-3.6.0/facebook" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Libraries/QrDroidServices" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RunManager" selected="Android Application.TableTennisAndroid">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -453,8 +483,30 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="android" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="android" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Android Application.TableTennisAndroid" />
+      <item index="1" class="java.lang.String" itemvalue="Android Application.android" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -468,12 +520,14 @@
       <created>1390606897594</created>
       <updated>1390606897594</updated>
       <workItem from="1390606899836" duration="2467000" />
-      <workItem from="1390609727882" duration="290000" />
+      <workItem from="1390609727882" duration="6312000" />
+      <workItem from="1390620226516" duration="844000" />
+      <workItem from="1390621201832" duration="323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2757000" />
+    <option name="totallyTimeSpent" value="9946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -481,32 +535,32 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -533,16 +587,60 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/LaunchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="34" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1380">
+        <state line="30" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="795">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="17" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="495">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/LaunchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="8" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1065">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/LocaleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="23" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2820" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/SessionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="64" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/LaunchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="34" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1380">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/session.xml">
       <provider editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -550,9 +648,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="11" column="46" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="315" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -572,44 +668,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/session.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="222" selection-end="222" vertical-scroll-proportion="-3.3333333" vertical-offset="0" max-vertical-offset="195" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider editor-type-id="text-editor">
-        <state line="11" column="46" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/session.xml">
-      <provider editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/LocaleManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="51" selection-start="3551" selection-end="3551" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="2490" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/DecodeFormatManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="37" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.63706565" vertical-offset="180" max-vertical-offset="1305" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/SessionActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="611" max-vertical-offset="1155">
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/encode/ContactEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="44" selection-start="2719" selection-end="2719" vertical-scroll-proportion="0.0" vertical-offset="488" max-vertical-offset="1290" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/share/LoadPackagesAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="13" selection-start="1926" selection-end="1927" vertical-scroll-proportion="-6.3461537" vertical-offset="330" max-vertical-offset="1365" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/book/SearchBookContentsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="62" selection-start="7400" selection-end="7400" vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="3450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/history/HistoryManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="43" selection-start="3035" selection-end="3035" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="4935" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/result/supplement/SupplementalInfoRetriever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="32" selection-start="3753" selection-end="3753" vertical-scroll-proportion="0.27182046" vertical-offset="502" max-vertical-offset="2250" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/camera/CameraConfigurationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="272" column="59" selection-start="11182" selection-end="11182" vertical-scroll-proportion="0.0" vertical-offset="3359" max-vertical-offset="4920" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/PreferencesFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="58" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="930" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/DecodeThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="23" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1365" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/clipboard/ClipboardInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="43" selection-start="1552" selection-end="1552" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/camera/AutoFocusManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="42" selection-start="1301" selection-end="1301" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="1410" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/encode/VCardContactEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="44" selection-start="3435" selection-end="3435" vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="2085" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/result/supplement/BookResultInfoRetriever.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="47" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0" vertical-offset="724" max-vertical-offset="1245" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/ViewfinderView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="44" selection-start="4710" selection-end="4710" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2475" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/HttpHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="227" column="3" selection-start="7557" selection-end="7557" vertical-scroll-proportion="0.0" vertical-offset="2348" max-vertical-offset="3150" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/encode/QRCodeEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="344" column="25" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.0" vertical-offset="4207" max-vertical-offset="5010" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/result/WifiResultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="37" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.20969696" vertical-offset="37" max-vertical-offset="1215" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Libraries/zxing-master/android/src/com/google/zxing/client/android/DecodeHintManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="205" column="50" selection-start="7191" selection-end="7191" vertical-scroll-proportion="0.49632353" vertical-offset="2445" max-vertical-offset="3270" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="33" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+        <state line="10" column="17" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/LaunchActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/hacklightly/TableTennisAndroid/SessionActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="563" selection-end="563" vertical-scroll-proportion="0.1452206" vertical-offset="71" max-vertical-offset="1155">
-          <folding />
+        <state line="41" column="31" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.88235295" vertical-offset="135" max-vertical-offset="780">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -689,6 +878,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Parse-1.4.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
