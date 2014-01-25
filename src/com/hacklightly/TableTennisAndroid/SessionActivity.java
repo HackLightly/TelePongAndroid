@@ -59,6 +59,7 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
         setContentView(R.layout.session);
         myID = getIntent().getStringExtra("id");
         Log.d ("myapp", "read in session: " + myID);
+
 /*
         pd = new ProgressDialog(this);
         pd.setTitle("Waiting...");
@@ -77,6 +78,9 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
         mAccelLast = SensorManager.GRAVITY_EARTH;
         n = 0;
         nLast = 0;
+
+        P1_SCORE = 0;
+        P2_SCORE = 0;
 
 
         SocketIOClient.connect("http://telepong.herokuapp.com", new ConnectCallback() {

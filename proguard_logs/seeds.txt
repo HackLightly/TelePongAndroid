@@ -10,7 +10,10 @@ com.codebutler.android_websockets.R$id: int container2
 com.codebutler.android_websockets.R$id: int finePrint
 com.codebutler.android_websockets.R$id: int image
 com.codebutler.android_websockets.R$id: int imageView
+com.codebutler.android_websockets.R$id: int info
 com.codebutler.android_websockets.R$id: int qr_button
+com.codebutler.android_websockets.R$id: int result
+com.codebutler.android_websockets.R$id: int score
 com.codebutler.android_websockets.R$id: int splash
 com.codebutler.android_websockets.R$id: int textView
 com.codebutler.android_websockets.R$id: int textView2
@@ -19,8 +22,10 @@ com.codebutler.android_websockets.R$id: int textView4
 com.codebutler.android_websockets.R$id: int title
 com.codebutler.android_websockets.R$layout: int about
 com.codebutler.android_websockets.R$layout: int main
+com.codebutler.android_websockets.R$layout: int score
 com.codebutler.android_websockets.R$layout: int session
 com.codebutler.android_websockets.R$layout: int splash
+com.codebutler.android_websockets.R$raw: int swoosh
 com.codebutler.android_websockets.R$string: int app_name
 com.hacklightly.TableTennisAndroid.AboutActivity
 com.hacklightly.TableTennisAndroid.AboutActivity: AboutActivity()
@@ -39,7 +44,10 @@ com.hacklightly.TableTennisAndroid.R$id: int container2
 com.hacklightly.TableTennisAndroid.R$id: int finePrint
 com.hacklightly.TableTennisAndroid.R$id: int image
 com.hacklightly.TableTennisAndroid.R$id: int imageView
+com.hacklightly.TableTennisAndroid.R$id: int info
 com.hacklightly.TableTennisAndroid.R$id: int qr_button
+com.hacklightly.TableTennisAndroid.R$id: int result
+com.hacklightly.TableTennisAndroid.R$id: int score
 com.hacklightly.TableTennisAndroid.R$id: int splash
 com.hacklightly.TableTennisAndroid.R$id: int textView
 com.hacklightly.TableTennisAndroid.R$id: int textView2
@@ -48,9 +56,13 @@ com.hacklightly.TableTennisAndroid.R$id: int textView4
 com.hacklightly.TableTennisAndroid.R$id: int title
 com.hacklightly.TableTennisAndroid.R$layout: int about
 com.hacklightly.TableTennisAndroid.R$layout: int main
+com.hacklightly.TableTennisAndroid.R$layout: int score
 com.hacklightly.TableTennisAndroid.R$layout: int session
 com.hacklightly.TableTennisAndroid.R$layout: int splash
+com.hacklightly.TableTennisAndroid.R$raw: int swoosh
 com.hacklightly.TableTennisAndroid.R$string: int app_name
+com.hacklightly.TableTennisAndroid.ScoreActivity
+com.hacklightly.TableTennisAndroid.ScoreActivity: ScoreActivity()
 com.hacklightly.TableTennisAndroid.SessionActivity
 com.hacklightly.TableTennisAndroid.SessionActivity: SessionActivity()
 com.hacklightly.TableTennisAndroid.SplashActivity

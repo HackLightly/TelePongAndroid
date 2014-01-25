@@ -111,19 +111,39 @@ com.hacklightly.TableTennisAndroid.LaunchActivity$1 -> com.hacklightly.TableTenn
 com.hacklightly.TableTennisAndroid.LaunchActivity$2 -> com.hacklightly.TableTennisAndroid.e:
     com.hacklightly.TableTennisAndroid.LaunchActivity this$0 -> a
     void run() -> run
+com.hacklightly.TableTennisAndroid.ScoreActivity -> com.hacklightly.TableTennisAndroid.ScoreActivity:
+    int p1Score -> a
+    int p2Score -> b
+    int playerValue -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+com.hacklightly.TableTennisAndroid.ScoreActivity$1 -> com.hacklightly.TableTennisAndroid.f:
+    com.hacklightly.TableTennisAndroid.ScoreActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.hacklightly.TableTennisAndroid.ScoreActivity$1$1 -> com.hacklightly.TableTennisAndroid.g:
+    com.hacklightly.TableTennisAndroid.ScoreActivity$1 this$1 -> a
+    void run() -> run
+com.hacklightly.TableTennisAndroid.ScoreActivity$2 -> com.hacklightly.TableTennisAndroid.h:
+    com.hacklightly.TableTennisAndroid.ScoreActivity this$0 -> a
+    void run() -> run
 com.hacklightly.TableTennisAndroid.SessionActivity -> com.hacklightly.TableTennisAndroid.SessionActivity:
-    android.hardware.SensorManager sensorMan -> b
-    android.hardware.Sensor accelerometer -> c
-    float[] mGravity -> d
-    float mAccel -> e
-    float mAccelCurrent -> f
-    float mAccelLast -> g
-    int n -> h
-    int nLast -> i
+    android.hardware.SensorManager sensorMan -> e
+    android.hardware.Sensor accelerometer -> f
+    float[] mGravity -> g
+    float mAccel -> h
+    float mAccelCurrent -> i
+    float mAccelLast -> j
+    int n -> k
+    int nLast -> l
+    android.media.MediaPlayer mPlayer -> m
     com.koushikdutta.async.http.socketio.SocketIOClient S_CLIENT -> a
-    java.lang.String myID -> j
-    boolean started -> k
-    android.os.Vibrator v -> l
+    java.lang.String myID -> n
+    boolean started -> o
+    boolean playerIsSet -> p
+    int playerValue -> b
+    int P1_SCORE -> c
+    int P2_SCORE -> d
+    android.os.Vibrator v -> q
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
     void onPause() -> onPause
@@ -137,13 +157,19 @@ com.hacklightly.TableTennisAndroid.SessionActivity -> com.hacklightly.TableTenni
     void onJSON(org.json.JSONObject,com.koushikdutta.async.http.socketio.Acknowledge) -> a
     void onString(java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
     java.lang.String access$000(com.hacklightly.TableTennisAndroid.SessionActivity) -> a
-com.hacklightly.TableTennisAndroid.SessionActivity$1 -> com.hacklightly.TableTennisAndroid.f:
+com.hacklightly.TableTennisAndroid.SessionActivity$1 -> com.hacklightly.TableTennisAndroid.i:
     com.hacklightly.TableTennisAndroid.SessionActivity this$0 -> a
     void onConnectCompleted(java.lang.Exception,com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.hacklightly.TableTennisAndroid.SessionActivity$2 -> com.hacklightly.TableTennisAndroid.j:
+    com.hacklightly.TableTennisAndroid.SessionActivity this$0 -> a
+    void run() -> run
+com.hacklightly.TableTennisAndroid.SessionActivity$3 -> com.hacklightly.TableTennisAndroid.k:
+    com.hacklightly.TableTennisAndroid.SessionActivity this$0 -> a
+    void run() -> run
 com.hacklightly.TableTennisAndroid.SplashActivity -> com.hacklightly.TableTennisAndroid.SplashActivity:
     int time -> a
     void onCreate(android.os.Bundle) -> onCreate
-com.hacklightly.TableTennisAndroid.SplashActivity$1 -> com.hacklightly.TableTennisAndroid.g:
+com.hacklightly.TableTennisAndroid.SplashActivity$1 -> com.hacklightly.TableTennisAndroid.l:
     com.hacklightly.TableTennisAndroid.SplashActivity this$0 -> a
     void run() -> run
 com.koushikdutta.async.http.socketio.Acknowledge -> com.b.a.a.a.a:

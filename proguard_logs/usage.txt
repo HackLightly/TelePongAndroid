@@ -26,6 +26,7 @@ com.codebutler.android_websockets.R$attr
 com.codebutler.android_websockets.R$drawable
 com.codebutler.android_websockets.R$id
 com.codebutler.android_websockets.R$layout
+com.codebutler.android_websockets.R$raw
 com.codebutler.android_websockets.R$string
 com.codebutler.android_websockets.WebSocketClient:
     private static final java.lang.String TAG
@@ -38,6 +39,7 @@ com.hacklightly.TableTennisAndroid.R$attr
 com.hacklightly.TableTennisAndroid.R$drawable
 com.hacklightly.TableTennisAndroid.R$id
 com.hacklightly.TableTennisAndroid.R$layout
+com.hacklightly.TableTennisAndroid.R$raw
 com.hacklightly.TableTennisAndroid.R$string
 com.koushikdutta.async.http.socketio.EventEmitter:
     37:43:public void once(java.lang.String,com.koushikdutta.async.http.socketio.EventCallback)
