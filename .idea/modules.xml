@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../Libraries/QrDroidServices/QrDroidServices.iml" filepath="$PROJECT_DIR$/../../Libraries/QrDroidServices/QrDroidServices.iml" />
       <module fileurl="file://$PROJECT_DIR$/TableTennisAndroid.iml" filepath="$PROJECT_DIR$/TableTennisAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Libraries/android-websockets-master/android-websockets-master.iml" filepath="$PROJECT_DIR$/../../Libraries/android-websockets-master/android-websockets-master.iml" />
     </modules>
   </component>
 </project>

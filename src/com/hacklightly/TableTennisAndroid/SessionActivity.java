@@ -7,24 +7,35 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Vibrator;
 import android.util.FloatMath;
 import android.util.Log;
+import android.view.Window;
+import com.koushikdutta.async.http.socketio.*;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by sameer on 1/24/2014.
  */
-public class SessionActivity extends Activity implements SensorEventListener {
+public class SessionActivity extends Activity implements SensorEventListener, ConnectCallback, EventCallback, DisconnectCallback, ErrorCallback {
     private SensorManager sensorMan;
     private Sensor accelerometer;
-
     private float[] mGravity;
     private float mAccel;
     private float mAccelCurrent;
     private float mAccelLast;
     int n, nLast;
 
+    public static SocketIOClient S_CLIENT;
+    public static String MY_ID;
+
+
+
     public void onCreate(Bundle savedInstanceState) {
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
 
         sensorMan = (SensorManager)getSystemService(SENSOR_SERVICE);
@@ -34,6 +45,50 @@ public class SessionActivity extends Activity implements SensorEventListener {
         mAccelLast = SensorManager.GRAVITY_EARTH;
         n = 0;
         nLast = 0;
+
+        MY_ID = getIntent().getStringExtra("id");
+        Log.d ("myapp", MY_ID);
+
+        SocketIOClient.connect("http://telepong.herokuapp.com", new ConnectCallback() {
+
+            @Override
+            public void onConnectCompleted(Exception ex, SocketIOClient client) {
+                S_CLIENT = client;
+
+                if (ex != null) {
+                    return;
+                }
+
+                JSONObject connect = new JSONObject();
+
+                try {
+                    connect.put("data", MY_ID);
+
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+                JSONArray jsonArray = new JSONArray();
+                jsonArray.put(connect);
+
+                S_CLIENT.emit("joinConnectionMobile", jsonArray);
+                Log.d("myapp", "emitted: " + jsonArray.toString());
+
+                client.setDisconnectCallback(SessionActivity.this);
+                client.setErrorCallback(SessionActivity.this);
+                //client.setJSONCallback(SessionActivity.this);
+                //client.setStringCallback(SessionActivity.this);
+
+                //You need to explicitly specify which events you are interested in receiving
+                client.addListener("statusChange", SessionActivity.this);
+                client.addListener("gameData", SessionActivity.this);
+
+
+            }
+        }, new Handler());
+
+
     }
 
     public void onResume() {
@@ -78,4 +133,32 @@ public class SessionActivity extends Activity implements SensorEventListener {
         // required method
     }
 
+    @Override
+    public void onEvent(String event, JSONArray argument, Acknowledge acknowledge) {
+
+        //Log.d("MainActivity", "Event:" + event + "ArgumentsHI:"
+        //        + argument.toString(2));
+
+        if (event.equals("statusChange")) {
+
+        }
+        else if (event.equals ("gameData")) {
+
+        }
+     }
+
+    @Override
+    public void onConnectCompleted(Exception ex, SocketIOClient client) {
+
+    }
+
+    @Override
+    public void onDisconnect(Exception e) {
+        Log.d("myapp", "SOCKET DISCONNECTED");
+    }
+
+    @Override
+    public void onError(String error) {
+        Log.d("myapp", error);
+    }
 }

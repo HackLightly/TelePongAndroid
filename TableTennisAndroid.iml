@@ -16,6 +16,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="QrDroidServices" exported="" />
+    <orderEntry type="module" module-name="android-websockets-master" exported="" />
   </component>
 </module>
 

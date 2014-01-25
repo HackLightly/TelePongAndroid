@@ -3,13 +3,80 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
+              android:background="#55BD76">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/app_name"
+            android:textSize="50sp"
+            android:id="@+id/title"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/paddle"
+            android:layout_below="@+id/title">
+
+    </ImageView>
+
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/container1"
+              android:layout_below="@id/image"
+              android:layout_marginTop="30dp"
+              android:layout_centerInParent="true"
+      >
 
     <Button
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Scan QR"
-            android:id="@+id/button" android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+            android:id="@+id/qr_button"
+            android:background="#ffffff"
+            android:textSize="20sp"
+            android:textColor="#55BD76"/>
+
+
+</LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container2"
+            android:layout_below="@+id/container1">
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:id="@+id/about_button"
+            android:layout_marginTop="10dp"
+            android:textColor="#55BD76"
+            android:textSize="20sp"
+            android:background="#ffffff"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Developed and designed by Hack Lightly."
+            android:id="@+id/finePrint"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"/>
+
 </RelativeLayout>
 
