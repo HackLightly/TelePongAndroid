@@ -7,7 +7,6 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -20,8 +19,6 @@ import com.koushikdutta.async.http.socketio.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
 
 /**
  * Created by sameer on 1/24/2014.
@@ -37,15 +34,11 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
     private float mAccelCurrent;
     private float mAccelLast;
     private int n, nLast;
-    private   MediaPlayer mPlayer;
+
     public static SocketIOClient S_CLIENT;
     private String myID;
 
     private boolean started = false;
-    private boolean canHit = false;
-    private boolean playerIsSet = false;
-
-    private int playerValue = -1;
 
     private Vibrator v;
 
@@ -65,7 +58,7 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
         pd.setCancelable(false);*/
         //pd.setIndeterminate(true);
 
-        mPlayer = MediaPlayer.create(SessionActivity.this, R.raw.swoosh);
+
 
         started = false;
         sensorMan = (SensorManager)getSystemService(SENSOR_SERVICE);
@@ -105,14 +98,15 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
                 Log.d("myapp", "emitted: " + jsonArray.toString());
 
-               //client.setDisconnectCallback(SessionActivity.this);
+               // client.setDisconnectCallback(SessionActivity.this);
                 client.setErrorCallback(SessionActivity.this);
                 client.setJSONCallback(SessionActivity.this);
                 client.setStringCallback(SessionActivity.this);
+                //You need to explicitly specify which events you are interested in receiving
+
 
                 client.addListener("statusChange", SessionActivity.this);
                 client.addListener("gameData", SessionActivity.this);
-                client.addListener("onHit", SessionActivity.this);
 
 
                // pd.show();
@@ -177,9 +171,12 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
             n++;
             if(mAccel > 4.5){
                 if (Math.abs (n - nLast) >= 5) {
-                    //Log.d("test", "HIT: " + n);
+                    Log.d("test", "HIT: " + n);
+                     v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    // Vibrate for 500 milliseconds
+                    v.vibrate(100);
                     nLast = n;
-                    //Log.d ("test", "x: " + x + " y: " + y + " z: " + z);
+                    Log.d ("test", "x: " + x + " y: " + y + " z: " + z);
 
                     JSONObject swing = new JSONObject();
 
@@ -192,9 +189,10 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
                     JSONArray jsonArray = new JSONArray();
                     jsonArray.put(swing);
+
                     S_CLIENT.emit("swing", jsonArray);
 
-                    Log.d ("myapp", "emitted swing");
+
 
                 }
             }
@@ -210,12 +208,11 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
     @Override
     public void onEvent(String event, JSONArray argument, Acknowledge acknowledge) {
-        String s = argument.toString();
-        Log.d("myapp", "event: " + event.toString() + " arg: " + s.toString());
-
+        String f = argument.toString();
+        Log.d("myapp", "event: " + event.toString() + " arg: " + f.toString());
         if (event.toString().equals("statusChange")) {
 
-
+            String s = argument.toString();
             s = s.substring(1, s.length()-1);
             int x = Integer.parseInt(s);
             Log.d("myapp", "GOT A STATUS CHANGE! val: " +  x);
@@ -223,88 +220,14 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
             if (x == 4) {
 
                 started = true;
-
                 Log.d("myapp", "got a 4");
 
-                if (!playerIsSet) {
-                    playerValue =2 ;
-                    playerIsSet = true;
-                }
             }
-
-            if (x == 2) {
-
-                if (!playerIsSet) {
-                    playerIsSet = true;
-                    playerValue = 1;
-                }
-
-            }
-
-            if (x == 8) {
-                //player one scored
-                Log.d ("myapp", "I " + (playerValue==1?"WON":"LOST") + " the point");
-            }
-
-            if ( x == 10) {
-                //player one won
-                Log.d ("myapp", "I " + (playerValue==1?"WON":"LOST") + " the game");
-                finish();
-                return;
-            }
-
-            if (x==9) {
-                //player two scored
-                Log.d ("myapp", "I " + (playerValue==2?"WON":"LOST") + " the point");
-
-            }
-
-            if (x == 11) {
-                //player two won
-                Log.d ("myapp", "I " + (playerValue==2?"WON":"LOST") + " the game");
-                finish();
-                return;
-            }
-            if (x== -1) {
-                Log.d ("myapp", "ERROR: " + x);
-                finish();
-                return;
-            }
-
-
-
        }
 
 
         else if (event.equals ("gameData")) {
 
-        }
-        else if (event.equals ("onHit")) {
-
-            s = s.substring(1, s.length()-1);
-            int x = Integer.parseInt(s);
-            Log.d("myapp", "got a hit! player: " +  x + " my player #: " + playerValue);
-
-
-            if ( x == playerValue) {
-
-
-
-                try {
-                    mPlayer.prepare();
-                } catch (IllegalStateException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                mPlayer.start();
-
-
-                v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                // Vibrate for 500 milliseconds
-                v.vibrate(100);
-            }
         }
      }
 
