@@ -1,0 +1,335 @@
+com.codebutler.android_websockets.HybiParser -> com.a.a.a:
+    com.codebutler.android_websockets.WebSocketClient mClient -> a
+    boolean mMasking -> b
+    int mStage -> c
+    boolean mFinal -> d
+    boolean mMasked -> e
+    int mOpcode -> f
+    int mLengthSize -> g
+    int mLength -> h
+    int mMode -> i
+    byte[] mMask -> j
+    byte[] mPayload -> k
+    boolean mClosed -> l
+    java.io.ByteArrayOutputStream mBuffer -> m
+    java.util.List OPCODES -> n
+    java.util.List FRAGMENTED_OPCODES -> o
+    byte[] mask(byte[],byte[],int) -> a
+    void start(com.codebutler.android_websockets.HybiParser$HappyDataInputStream) -> a
+    void parseOpcode(byte) -> a
+    void parseLength(byte) -> b
+    void parseExtendedLength(byte[]) -> a
+    byte[] frame(java.lang.String) -> a
+    byte[] frame(byte[],int,int) -> a
+    byte[] frame(java.lang.String,int,int) -> a
+    byte[] frame(java.lang.Object,int,int) -> a
+    void emitFrame() -> a
+    void reset() -> b
+    java.lang.String encode(byte[]) -> b
+    byte[] decode(java.lang.String) -> b
+    int getInteger(byte[]) -> c
+    byte[] copyOfRange(byte[],int,int) -> b
+    byte[] slice(byte[],int) -> a
+    long byteArrayToLong(byte[],int,int) -> c
+com.codebutler.android_websockets.HybiParser$HappyDataInputStream -> com.a.a.b:
+    byte[] readBytes(int) -> a
+com.codebutler.android_websockets.HybiParser$ProtocolError -> com.a.a.c:
+com.codebutler.android_websockets.WebSocketClient -> com.a.a.d:
+    java.net.URI mURI -> a
+    com.codebutler.android_websockets.WebSocketClient$Listener mListener -> b
+    java.net.Socket mSocket -> c
+    java.lang.Thread mThread -> d
+    android.os.HandlerThread mHandlerThread -> e
+    android.os.Handler mHandler -> f
+    java.util.List mExtraHeaders -> g
+    com.codebutler.android_websockets.HybiParser mParser -> h
+    boolean mConnected -> i
+    java.lang.Object mSendLock -> j
+    javax.net.ssl.TrustManager[] sTrustManagers -> k
+    com.codebutler.android_websockets.WebSocketClient$Listener getListener() -> a
+    void connect() -> b
+    void disconnect() -> c
+    void send(java.lang.String) -> a
+    boolean isConnected() -> d
+    org.apache.http.StatusLine parseStatusLine(java.lang.String) -> b
+    org.apache.http.Header parseHeader(java.lang.String) -> c
+    java.lang.String readLine(com.codebutler.android_websockets.HybiParser$HappyDataInputStream) -> a
+    java.lang.String expectedKey(java.lang.String) -> d
+    java.lang.String createSecret() -> e
+    void sendFrame(byte[]) -> a
+    javax.net.ssl.SSLSocketFactory getSSLSocketFactory() -> f
+    java.net.URI access$000(com.codebutler.android_websockets.WebSocketClient) -> a
+    javax.net.ssl.SSLSocketFactory access$100(com.codebutler.android_websockets.WebSocketClient) -> b
+    java.net.Socket access$202(com.codebutler.android_websockets.WebSocketClient,java.net.Socket) -> a
+    java.net.Socket access$200(com.codebutler.android_websockets.WebSocketClient) -> c
+    java.lang.String access$300(com.codebutler.android_websockets.WebSocketClient) -> d
+    java.util.List access$400(com.codebutler.android_websockets.WebSocketClient) -> e
+    java.lang.String access$500(com.codebutler.android_websockets.WebSocketClient,com.codebutler.android_websockets.HybiParser$HappyDataInputStream) -> a
+    org.apache.http.StatusLine access$600(com.codebutler.android_websockets.WebSocketClient,java.lang.String) -> a
+    org.apache.http.Header access$700(com.codebutler.android_websockets.WebSocketClient,java.lang.String) -> b
+    java.lang.String access$800(com.codebutler.android_websockets.WebSocketClient,java.lang.String) -> c
+    com.codebutler.android_websockets.WebSocketClient$Listener access$900(com.codebutler.android_websockets.WebSocketClient) -> f
+    boolean access$1002(com.codebutler.android_websockets.WebSocketClient,boolean) -> a
+    com.codebutler.android_websockets.HybiParser access$1100(com.codebutler.android_websockets.WebSocketClient) -> g
+    java.lang.Object access$1200(com.codebutler.android_websockets.WebSocketClient) -> h
+com.codebutler.android_websockets.WebSocketClient$1 -> com.a.a.e:
+    com.codebutler.android_websockets.WebSocketClient this$0 -> a
+    void run() -> run
+com.codebutler.android_websockets.WebSocketClient$2 -> com.a.a.f:
+    com.codebutler.android_websockets.WebSocketClient this$0 -> a
+    void run() -> run
+com.codebutler.android_websockets.WebSocketClient$3 -> com.a.a.g:
+    byte[] val$frame -> a
+    com.codebutler.android_websockets.WebSocketClient this$0 -> b
+    void run() -> run
+com.codebutler.android_websockets.WebSocketClient$Listener -> com.a.a.h:
+    void onConnect() -> a
+    void onMessage(java.lang.String) -> a
+    void onMessage(byte[]) -> a
+    void onDisconnect(int,java.lang.String) -> a
+    void onError(java.lang.Exception) -> a
+com.hacklightly.TableTennisAndroid.AboutActivity -> com.hacklightly.TableTennisAndroid.AboutActivity:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
+com.hacklightly.TableTennisAndroid.AboutActivity$1 -> com.hacklightly.TableTennisAndroid.a:
+    com.hacklightly.TableTennisAndroid.AboutActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.hacklightly.TableTennisAndroid.AboutActivity$1$1 -> com.hacklightly.TableTennisAndroid.b:
+    com.hacklightly.TableTennisAndroid.AboutActivity$1 this$1 -> a
+    void run() -> run
+com.hacklightly.TableTennisAndroid.AboutActivity$2 -> com.hacklightly.TableTennisAndroid.c:
+    com.hacklightly.TableTennisAndroid.AboutActivity this$0 -> a
+    void run() -> run
+com.hacklightly.TableTennisAndroid.LaunchActivity -> com.hacklightly.TableTennisAndroid.LaunchActivity:
+    android.graphics.Typeface FONT -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+com.hacklightly.TableTennisAndroid.LaunchActivity$1 -> com.hacklightly.TableTennisAndroid.d:
+    com.hacklightly.TableTennisAndroid.LaunchActivity this$0 -> a
+    void run() -> run
+com.hacklightly.TableTennisAndroid.LaunchActivity$2 -> com.hacklightly.TableTennisAndroid.e:
+    com.hacklightly.TableTennisAndroid.LaunchActivity this$0 -> a
+    void run() -> run
+com.hacklightly.TableTennisAndroid.SessionActivity -> com.hacklightly.TableTennisAndroid.SessionActivity:
+    android.hardware.SensorManager sensorMan -> b
+    android.hardware.Sensor accelerometer -> c
+    float[] mGravity -> d
+    float mAccel -> e
+    float mAccelCurrent -> f
+    float mAccelLast -> g
+    int n -> h
+    int nLast -> i
+    com.koushikdutta.async.http.socketio.SocketIOClient S_CLIENT -> a
+    java.lang.String myID -> j
+    boolean started -> k
+    android.os.Vibrator v -> l
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onEvent(java.lang.String,org.json.JSONArray,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void onConnectCompleted(java.lang.Exception,com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+    void onDestroy() -> onDestroy
+    void onError(java.lang.String) -> a
+    void onJSON(org.json.JSONObject,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void onString(java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    java.lang.String access$000(com.hacklightly.TableTennisAndroid.SessionActivity) -> a
+com.hacklightly.TableTennisAndroid.SessionActivity$1 -> com.hacklightly.TableTennisAndroid.f:
+    com.hacklightly.TableTennisAndroid.SessionActivity this$0 -> a
+    void onConnectCompleted(java.lang.Exception,com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.hacklightly.TableTennisAndroid.SplashActivity -> com.hacklightly.TableTennisAndroid.SplashActivity:
+    int time -> a
+    void onCreate(android.os.Bundle) -> onCreate
+com.hacklightly.TableTennisAndroid.SplashActivity$1 -> com.hacklightly.TableTennisAndroid.g:
+    com.hacklightly.TableTennisAndroid.SplashActivity this$0 -> a
+    void run() -> run
+com.koushikdutta.async.http.socketio.Acknowledge -> com.b.a.a.a.a:
+    void acknowledge(org.json.JSONArray) -> a
+com.koushikdutta.async.http.socketio.ConnectCallback -> com.b.a.a.a.b:
+    void onConnectCompleted(java.lang.Exception,com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.DisconnectCallback -> com.b.a.a.a.c:
+    void onDisconnect(java.lang.Exception) -> a
+com.koushikdutta.async.http.socketio.ErrorCallback -> com.b.a.a.a.d:
+    void onError(java.lang.String) -> a
+com.koushikdutta.async.http.socketio.EventCallback -> com.b.a.a.a.e:
+    void onEvent(java.lang.String,org.json.JSONArray,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+com.koushikdutta.async.http.socketio.EventEmitter -> com.b.a.a.a.f:
+    com.koushikdutta.async.util.HashList callbacks -> a
+    void onEvent(java.lang.String,org.json.JSONArray,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void addListener(java.lang.String,com.koushikdutta.async.http.socketio.EventCallback) -> a
+    void on(java.lang.String,com.koushikdutta.async.http.socketio.EventCallback) -> b
+com.koushikdutta.async.http.socketio.EventEmitter$OnceCallback -> com.b.a.a.a.g:
+com.koushikdutta.async.http.socketio.JSONCallback -> com.b.a.a.a.h:
+    void onJSON(org.json.JSONObject,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+com.koushikdutta.async.http.socketio.ReconnectCallback -> com.b.a.a.a.i:
+    void onReconnect() -> a
+com.koushikdutta.async.http.socketio.SocketIOClient -> com.b.a.a.a.j:
+    boolean connected -> b
+    boolean disconnected -> c
+    android.os.Handler handler -> d
+    com.koushikdutta.async.http.socketio.ConnectCallback connectCallback -> e
+    com.koushikdutta.async.http.socketio.ErrorCallback errorCallback -> f
+    com.koushikdutta.async.http.socketio.DisconnectCallback disconnectCallback -> g
+    com.koushikdutta.async.http.socketio.ReconnectCallback reconnectCallback -> h
+    com.koushikdutta.async.http.socketio.JSONCallback jsonCallback -> i
+    com.koushikdutta.async.http.socketio.StringCallback stringCallback -> j
+    com.koushikdutta.async.http.socketio.SocketIOConnection connection -> k
+    java.lang.String endpoint -> l
+    void emitRaw(int,java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void emit(java.lang.String,org.json.JSONArray) -> a
+    void emit(java.lang.String,org.json.JSONArray,com.koushikdutta.async.http.socketio.Acknowledge) -> b
+    void connect(java.lang.String,com.koushikdutta.async.http.socketio.ConnectCallback,android.os.Handler) -> a
+    void connect(com.koushikdutta.http.AsyncHttpClient$SocketIORequest,com.koushikdutta.async.http.socketio.ConnectCallback,android.os.Handler) -> a
+    void setErrorCallback(com.koushikdutta.async.http.socketio.ErrorCallback) -> a
+    com.koushikdutta.async.http.socketio.DisconnectCallback getDisconnectCallback() -> a
+    void setJSONCallback(com.koushikdutta.async.http.socketio.JSONCallback) -> a
+    void setStringCallback(com.koushikdutta.async.http.socketio.StringCallback) -> a
+    boolean isConnected() -> b
+    void disconnect() -> c
+    void of(java.lang.String,com.koushikdutta.async.http.socketio.ConnectCallback) -> a
+com.koushikdutta.async.http.socketio.SocketIOClient$1 -> com.b.a.a.a.k:
+    com.koushikdutta.http.AsyncHttpClient$SocketIORequest val$request -> a
+    android.os.Handler val$handler -> b
+    com.koushikdutta.async.http.socketio.ConnectCallback val$callback -> c
+    com.koushikdutta.async.http.socketio.SocketIOConnection val$connection -> d
+    void onConnectCompleted(java.lang.Exception,com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOClient$1$1 -> com.b.a.a.a.l:
+    com.koushikdutta.async.http.socketio.SocketIOClient$1 this$0 -> a
+    void onConnectCompleted(java.lang.Exception,com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOClient$2 -> com.b.a.a.a.m:
+    com.koushikdutta.async.http.socketio.DisconnectCallback val$disconnectCallback -> a
+    com.koushikdutta.async.http.socketio.SocketIOClient this$0 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection -> com.b.a.a.a.n:
+    android.os.Handler mHandler -> i
+    com.koushikdutta.http.AsyncHttpClient httpClient -> a
+    int heartbeat -> b
+    java.util.ArrayList clients -> c
+    com.codebutler.android_websockets.WebSocketClient webSocketClient -> d
+    com.koushikdutta.http.AsyncHttpClient$SocketIORequest request -> e
+    java.util.Hashtable acknowledges -> f
+    int ackCount -> g
+    long reconnectDelay -> h
+    boolean isConnected() -> a
+    void emitRaw(int,com.koushikdutta.async.http.socketio.SocketIOClient,java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void connect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+    void disconnect(com.koushikdutta.async.http.socketio.SocketIOClient) -> b
+    void reconnect() -> b
+    void setupHeartbeat() -> c
+    void select(java.lang.String,com.koushikdutta.async.http.socketio.SocketIOConnection$SelectCallback) -> a
+    void delayReconnect() -> d
+    void reportDisconnect(java.lang.Exception) -> a
+    void reportConnect(java.lang.String) -> a
+    void reportJson(java.lang.String,org.json.JSONObject,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void reportString(java.lang.String,java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void reportEvent(java.lang.String,java.lang.String,org.json.JSONArray,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void reportError(java.lang.String,java.lang.String) -> a
+    com.koushikdutta.async.http.socketio.Acknowledge acknowledge(java.lang.String) -> b
+    void access$000(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.Exception) -> a
+    void access$100(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.String) -> a
+    com.koushikdutta.async.http.socketio.Acknowledge access$200(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.String) -> b
+    void access$300(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.String,java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void access$400(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.String,org.json.JSONObject,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void access$500(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.String,java.lang.String,org.json.JSONArray,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+    void access$600(com.koushikdutta.async.http.socketio.SocketIOConnection,java.lang.String,java.lang.String) -> a
+    android.os.Handler access$700(com.koushikdutta.async.http.socketio.SocketIOConnection) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$1 -> com.b.a.a.a.o:
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> a
+    void onCompleted(java.lang.Exception,java.lang.String) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$1$1 -> com.b.a.a.a.p:
+    com.koushikdutta.async.http.socketio.SocketIOConnection$1 this$1 -> a
+    void onMessage(byte[]) -> a
+    void onMessage(java.lang.String) -> a
+    void onError(java.lang.Exception) -> a
+    void onDisconnect(int,java.lang.String) -> a
+    void onConnect() -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$10 -> com.b.a.a.a.q:
+    java.lang.String val$messageId -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> b
+    void acknowledge(org.json.JSONArray) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$2 -> com.b.a.a.a.r:
+    com.codebutler.android_websockets.WebSocketClient val$ws -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$3 -> com.b.a.a.a.s:
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> a
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$4 -> com.b.a.a.a.t:
+    java.lang.Exception val$ex -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> b
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$4$1 -> com.b.a.a.a.u:
+    com.koushikdutta.async.http.socketio.DisconnectCallback val$closed -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection$4 this$1 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$4$2 -> com.b.a.a.a.v:
+    com.koushikdutta.async.http.socketio.ConnectCallback val$callback -> a
+    com.koushikdutta.async.http.socketio.SocketIOClient val$client -> b
+    com.koushikdutta.async.http.socketio.SocketIOConnection$4 this$1 -> c
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$5 -> com.b.a.a.a.w:
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> a
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$6 -> com.b.a.a.a.x:
+    org.json.JSONObject val$jsonMessage -> a
+    com.koushikdutta.async.http.socketio.Acknowledge val$acknowledge -> b
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> c
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$6$1 -> com.b.a.a.a.y:
+    com.koushikdutta.async.http.socketio.JSONCallback val$callback -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection$6 this$1 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$7 -> com.b.a.a.a.z:
+    java.lang.String val$string -> a
+    com.koushikdutta.async.http.socketio.Acknowledge val$acknowledge -> b
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> c
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$7$1 -> com.b.a.a.a.aa:
+    com.koushikdutta.async.http.socketio.StringCallback val$callback -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection$7 this$1 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$8 -> com.b.a.a.a.ab:
+    java.lang.String val$event -> a
+    org.json.JSONArray val$arguments -> b
+    com.koushikdutta.async.http.socketio.Acknowledge val$acknowledge -> c
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> d
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$8$1 -> com.b.a.a.a.ac:
+    com.koushikdutta.async.http.socketio.SocketIOClient val$client -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection$8 this$1 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$9 -> com.b.a.a.a.ad:
+    java.lang.String val$error -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection this$0 -> b
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.SocketIOConnection$9$1 -> com.b.a.a.a.ae:
+    com.koushikdutta.async.http.socketio.ErrorCallback val$callback -> a
+    com.koushikdutta.async.http.socketio.SocketIOConnection$9 this$1 -> b
+    void run() -> run
+com.koushikdutta.async.http.socketio.SocketIOConnection$SelectCallback -> com.b.a.a.a.af:
+    void onSelect(com.koushikdutta.async.http.socketio.SocketIOClient) -> a
+com.koushikdutta.async.http.socketio.StringCallback -> com.b.a.a.a.ag:
+    void onString(java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge) -> a
+com.koushikdutta.async.util.HashList -> com.b.a.b.a:
+    void add(java.lang.String,java.lang.Object) -> a
+com.koushikdutta.http.AsyncHttpClient -> com.b.b.a:
+    void executeString(com.koushikdutta.http.AsyncHttpClient$SocketIORequest,com.koushikdutta.http.AsyncHttpClient$StringCallback) -> a
+    byte[] readToEndAsArray(java.io.InputStream) -> a
+    java.lang.String readToEnd(java.io.InputStream) -> b
+    java.lang.String access$000(com.koushikdutta.http.AsyncHttpClient,java.io.InputStream) -> a
+com.koushikdutta.http.AsyncHttpClient$1 -> com.b.b.b:
+    com.koushikdutta.http.AsyncHttpClient$SocketIORequest val$socketIORequest -> a
+    com.koushikdutta.http.AsyncHttpClient$StringCallback val$stringCallback -> b
+    com.koushikdutta.http.AsyncHttpClient this$0 -> c
+    java.lang.Void doInBackground(java.lang.Void[]) -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.koushikdutta.http.AsyncHttpClient$SocketIORequest -> com.b.b.c:
+    java.lang.String mUri -> a
+    java.lang.String mEndpoint -> b
+    java.lang.String getUri() -> a
+    java.lang.String getEndpoint() -> b
+com.koushikdutta.http.AsyncHttpClient$StringCallback -> com.b.b.d:
+    void onCompleted(java.lang.Exception,java.lang.String) -> a

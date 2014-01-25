@@ -223,6 +223,8 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
                 Log.d("myapp", "got a 4");
 
             }
+
+            if 
        }
 
 

@@ -1,0 +1,61 @@
+com.codebutler.android_websockets.BuildConfig
+com.codebutler.android_websockets.HybiParser:
+    private static final java.lang.String TAG
+    private static final int BYTE
+    private static final int FIN
+    private static final int MASK
+    private static final int RSV1
+    private static final int RSV2
+    private static final int RSV3
+    private static final int OPCODE
+    private static final int LENGTH
+    private static final int MODE_TEXT
+    private static final int MODE_BINARY
+    private static final int OP_CONTINUATION
+    private static final int OP_TEXT
+    private static final int OP_BINARY
+    private static final int OP_CLOSE
+    private static final int OP_PING
+    private static final int OP_PONG
+    181:181:public byte[] frame(byte[])
+    244:245:public void ping(java.lang.String)
+    248:251:public void close(int,java.lang.String)
+com.codebutler.android_websockets.R
+com.codebutler.android_websockets.R$anim
+com.codebutler.android_websockets.R$attr
+com.codebutler.android_websockets.R$drawable
+com.codebutler.android_websockets.R$id
+com.codebutler.android_websockets.R$layout
+com.codebutler.android_websockets.R$string
+com.codebutler.android_websockets.WebSocketClient:
+    private static final java.lang.String TAG
+    47:48:public static void setTrustManagers(javax.net.ssl.TrustManager[])
+    180:181:public void send(byte[])
+com.hacklightly.TableTennisAndroid.BuildConfig
+com.hacklightly.TableTennisAndroid.R
+com.hacklightly.TableTennisAndroid.R$anim
+com.hacklightly.TableTennisAndroid.R$attr
+com.hacklightly.TableTennisAndroid.R$drawable
+com.hacklightly.TableTennisAndroid.R$id
+com.hacklightly.TableTennisAndroid.R$layout
+com.hacklightly.TableTennisAndroid.R$string
+com.koushikdutta.async.http.socketio.EventEmitter:
+    37:43:public void once(java.lang.String,com.koushikdutta.async.http.socketio.EventCallback)
+    50:54:public void removeListener(java.lang.String,com.koushikdutta.async.http.socketio.EventCallback)
+com.koushikdutta.async.http.socketio.EventEmitter$1
+com.koushikdutta.async.http.socketio.SocketIOClient:
+    28:29:public void emit(java.lang.String)
+    32:33:public void emit(org.json.JSONObject)
+    46:47:public void emit(java.lang.String,com.koushikdutta.async.http.socketio.Acknowledge)
+    50:51:public void emit(org.json.JSONObject,com.koushikdutta.async.http.socketio.Acknowledge)
+    103:103:public com.koushikdutta.async.http.socketio.ErrorCallback getErrorCallback()
+    109:110:public void setDisconnectCallback(com.koushikdutta.async.http.socketio.DisconnectCallback)
+    119:120:public void setReconnectCallback(com.koushikdutta.async.http.socketio.ReconnectCallback)
+    123:123:public com.koushikdutta.async.http.socketio.ReconnectCallback getReconnectCallback()
+    133:133:public com.koushikdutta.async.http.socketio.JSONCallback getJSONCallback()
+    143:143:public com.koushikdutta.async.http.socketio.StringCallback getStringCallback()
+    181:181:public com.codebutler.android_websockets.WebSocketClient getWebSocket()
+com.koushikdutta.async.util.HashList:
+    private static final long serialVersionUID
+    17:18:public boolean contains(java.lang.String)
+com.koushikdutta.http.AsyncHttpClient$WebSocketConnectCallback
