@@ -1,7 +1,6 @@
 package com.hacklightly.TableTennisAndroid;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -10,25 +9,37 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * Created by sameer on 1/24/2014.
+ * Created by sameer on 1/25/2014.
  */
-public class AboutActivity extends Activity {
+public class ScoreActivity extends Activity {
+
+    private int p1Score, p2Score, playerValue;
+
     public void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.about);
+        setContentView(R.layout.score);
 
-        TextView title = (TextView)findViewById(R.id.title), tv1 = (TextView) findViewById(R.id.textView),
-                tv2 = (TextView) findViewById(R.id.textView2), tv3 = (TextView) findViewById(R.id.textView3),
-                tv4 = (TextView) findViewById(R.id.textView4);
+        p1Score = Integer.parseInt(getIntent().getExtras().get("p1Score").toString());
+        p2Score = Integer.parseInt(getIntent().getExtras().get("p2Score").toString());
+        playerValue = Integer.parseInt(getIntent().getExtras().get("playerValue").toString());
 
-        Button back = (Button)findViewById(R.id.back_button);
+        TextView title = (TextView)findViewById(R.id.title), result = (TextView) findViewById(R.id.result),
+                score = (TextView) findViewById(R.id.score);
+
+        Button back = (Button) findViewById(R.id.back_button);
+        if (playerValue == 1) {
+            result.setText("You " + (p1Score>=p2Score?"WON!":"LOST!"));
+            score.setText("Score: "+ p1Score  + " - " + p2Score);
+        }
+        else {
+            result.setText("You " + (p2Score>=p1Score?"WON!":"LOST!"));
+            score.setText("Score: "+ p2Score  + " - " + p1Score);
+        }
 
         title.setTypeface(LaunchActivity.FONT);
-        tv1.setTypeface(LaunchActivity.FONT);
-        tv2.setTypeface(LaunchActivity.FONT);
-        tv3.setTypeface(LaunchActivity.FONT);
-        tv4.setTypeface(LaunchActivity.FONT);
+        result.setTypeface(LaunchActivity.FONT);
+        score.setTypeface(LaunchActivity.FONT);
         back.setTypeface(LaunchActivity.FONT);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +50,6 @@ public class AboutActivity extends Activity {
                     @Override
                     public void run() {
 
-
                         finish();
                         //Apply splash exit (fade out) and main entry (fade in) animation transitions.
                         overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
@@ -48,11 +58,11 @@ public class AboutActivity extends Activity {
             }
         });
 
-
     }
 
+
     @Override
-  public void onDestroy () {
+    public void onDestroy () {
         super.onDestroy();
         new Handler().postDelayed(new Runnable() {
             @Override

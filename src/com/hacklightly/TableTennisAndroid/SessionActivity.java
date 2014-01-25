@@ -3,6 +3,7 @@ package com.hacklightly.TableTennisAndroid;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -42,10 +43,11 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
     private String myID;
 
     private boolean started = false;
-    private boolean canHit = false;
     private boolean playerIsSet = false;
 
-    private int playerValue = -1;
+    public static int playerValue = -1;
+
+    public static int P1_SCORE = 0, P2_SCORE = 0;
 
     private Vibrator v;
 
@@ -245,18 +247,38 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
             if (x == 8) {
                 //player one scored
+                P1_SCORE ++;
                 Log.d ("myapp", "I " + (playerValue==1?"WON":"LOST") + " the point");
             }
 
             if ( x == 10) {
                 //player one won
                 Log.d ("myapp", "I " + (playerValue==1?"WON":"LOST") + " the game");
-                finish();
-                return;
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        //Create an intent that will start the main activity.
+                        Intent i = new Intent (SessionActivity.this, ScoreActivity.class);
+                        i.putExtra("playerValue", playerValue);
+                        i.putExtra("p1Score", P1_SCORE);
+                        i.putExtra("p2Score", P2_SCORE);
+                        SessionActivity.this.startActivity(i);
+                        SessionActivity.this.finish();
+
+                        //Apply splash exit (fade out) and main entry (fade in) animation transitions.
+                        overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+                        return;
+                    }
+                }, 300);
+
             }
 
             if (x==9) {
                 //player two scored
+                P2_SCORE ++;
                 Log.d ("myapp", "I " + (playerValue==2?"WON":"LOST") + " the point");
 
             }
@@ -264,8 +286,24 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
             if (x == 11) {
                 //player two won
                 Log.d ("myapp", "I " + (playerValue==2?"WON":"LOST") + " the game");
-                finish();
-                return;
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        //Create an intent that will start the main activity.
+                        Intent i = new Intent(SessionActivity.this, ScoreActivity.class);
+                        i.putExtra("playerValue", playerValue);
+                        i.putExtra("p1Score", P1_SCORE);
+                        i.putExtra("p2Score", P2_SCORE);
+                        SessionActivity.this.startActivity(i);
+                        SessionActivity.this.finish();
+
+                        //Apply splash exit (fade out) and main entry (fade in) animation transitions.
+                        overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+                        return;
+                    }
+                }, 300);
             }
             if (x== -1) {
                 Log.d ("myapp", "ERROR: " + x);
@@ -279,7 +317,7 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
 
         else if (event.equals ("gameData")) {
-            
+
         }
         else if (event.equals ("onHit")) {
 

@@ -24,6 +24,7 @@
         <activity android:name=".LaunchActivity"/>
         <activity android:name=".SessionActivity"/>
         <activity android:name=".AboutActivity"/>
+        <activity android:name=".ScoreActivity"/>
 
 
     </application>
