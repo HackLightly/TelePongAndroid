@@ -323,8 +323,8 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
         try {
         S_CLIENT.disconnect();
     }
-    catch (NullPointerException e) {}
-        Log.d("myapp", "SOCKET DISCONNECTED2");
+    catch (NullPointerException e) {Log.d("myapp", "SOCKET DISCONNECTED2");}
+
     }
 
     @Override
