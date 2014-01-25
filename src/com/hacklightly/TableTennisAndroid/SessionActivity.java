@@ -1,6 +1,7 @@
 package com.hacklightly.TableTennisAndroid;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -11,7 +12,9 @@ import android.os.Handler;
 import android.os.Vibrator;
 import android.util.FloatMath;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import com.koushikdutta.async.http.socketio.*;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -21,8 +24,9 @@ import org.json.JSONObject;
  * Created by sameer on 1/24/2014.
  */
 public class SessionActivity extends Activity implements SensorEventListener, ConnectCallback,
-        EventCallback, DisconnectCallback, ErrorCallback {
+        EventCallback,  ErrorCallback, JSONCallback, StringCallback {
 
+ //   private ProgressDialog pd;
     private SensorManager sensorMan;
     private Sensor accelerometer;
     private float[] mGravity;
@@ -32,14 +36,31 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
     private int n, nLast;
 
     public static SocketIOClient S_CLIENT;
-    public static String MY_ID;
+    private String myID;
+
+    private boolean started = false;
+
+    private Vibrator v;
 
 
 
     public void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.session);
+        myID = getIntent().getStringExtra("id");
+        Log.d ("myapp", "read in session: " + myID);
+/*
+        pd = new ProgressDialog(this);
+        pd.setTitle("Waiting...");
+        pd.setMessage("Waiting for Players...");
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        pd.setCancelable(false);*/
+        //pd.setIndeterminate(true);
 
+
+
+        started = false;
         sensorMan = (SensorManager)getSystemService(SENSOR_SERVICE);
         accelerometer = sensorMan.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mAccel = 0.00f;
@@ -48,15 +69,14 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
         n = 0;
         nLast = 0;
 
-        MY_ID = getIntent().getStringExtra("id");
-        Log.d ("myapp", MY_ID);
 
         SocketIOClient.connect("http://telepong.herokuapp.com", new ConnectCallback() {
 
             @Override
             public void onConnectCompleted(Exception ex, SocketIOClient client) {
-                S_CLIENT = client;
 
+                S_CLIENT = client;
+                Log.d ("myapp", "callback received");
                 if (ex != null) {
                     return;
                 }
@@ -64,8 +84,7 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
                 JSONObject connect = new JSONObject();
 
                 try {
-                    connect.put("data", MY_ID);
-
+                    connect.put("id", myID);
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -74,25 +93,42 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
                 JSONArray jsonArray = new JSONArray();
                 jsonArray.put(connect);
 
-                S_CLIENT.emit("joinConnectionMobile", jsonArray);
+                client.emit("joinConnectionMobile", jsonArray);
+
+
                 Log.d("myapp", "emitted: " + jsonArray.toString());
 
-                client.setDisconnectCallback(SessionActivity.this);
+               // client.setDisconnectCallback(SessionActivity.this);
                 client.setErrorCallback(SessionActivity.this);
-                //client.setJSONCallback(SessionActivity.this);
-                //client.setStringCallback(SessionActivity.this);
-
+                client.setJSONCallback(SessionActivity.this);
+                client.setStringCallback(SessionActivity.this);
                 //You need to explicitly specify which events you are interested in receiving
+
+
                 client.addListener("statusChange", SessionActivity.this);
                 client.addListener("gameData", SessionActivity.this);
+
+
+               // pd.show();
 
 
             }
         }, new Handler());
 
+        /*ImageView iv = (ImageView)findViewById(R.id.imageView);
+
+        iv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });*/
+
+
 
     }
-
+    @Override
     public void onResume() {
         super.onResume();
         sensorMan.registerListener(this, accelerometer,
@@ -100,7 +136,26 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
     }
 
     @Override
+    public void onPause () {
+        super.onPause();
+
+        try {
+            v.cancel();
+        }
+        catch (NullPointerException e) {}
+    }
+    @Override
+    public void onStop () {
+        super.onStop();
+        try {
+            v.cancel();
+        }
+        catch (NullPointerException e) {}
+    }
+
+    @Override
     public void onSensorChanged(SensorEvent event) {
+        if (started) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER){
             mGravity = event.values.clone();
             // Shake detection
@@ -115,17 +170,33 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
             // motion you want to detect
             n++;
             if(mAccel > 4.5){
-
-
                 if (Math.abs (n - nLast) >= 5) {
                     Log.d("test", "HIT: " + n);
-                    Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                     v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     // Vibrate for 500 milliseconds
                     v.vibrate(100);
                     nLast = n;
                     Log.d ("test", "x: " + x + " y: " + y + " z: " + z);
+
+                    JSONObject swing = new JSONObject();
+
+                    try {
+                        swing.put("id", myID);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    JSONArray jsonArray = new JSONArray();
+                    jsonArray.put(swing);
+
+                    S_CLIENT.emit("swing", jsonArray);
+
+
+
                 }
             }
+        }
         }
 
     }
@@ -137,13 +208,24 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
     @Override
     public void onEvent(String event, JSONArray argument, Acknowledge acknowledge) {
+        String f = argument.toString();
+        Log.d("myapp", "event: " + event.toString() + " arg: " + f.toString());
+        if (event.toString().equals("statusChange")) {
 
-        //Log.d("MainActivity", "Event:" + event + "ArgumentsHI:"
-        //        + argument.toString(2));
+            String s = argument.toString();
+            s = s.substring(1, s.length()-1);
+            int x = Integer.parseInt(s);
+            Log.d("myapp", "GOT A STATUS CHANGE! val: " +  x);
 
-        if (event.equals("statusChange")) {
+            if (x == 4) {
 
-        }
+                started = true;
+                Log.d("myapp", "got a 4");
+
+            }
+       }
+
+
         else if (event.equals ("gameData")) {
 
         }
@@ -154,13 +236,32 @@ public class SessionActivity extends Activity implements SensorEventListener, Co
 
     }
 
-    @Override
+   /* @Override
     public void onDisconnect(Exception e) {
         Log.d("myapp", "SOCKET DISCONNECTED");
+    }*/
+
+    public void onDestroy () {
+        super.onDestroy();
+        try {
+        S_CLIENT.disconnect();
+    }
+    catch (NullPointerException e) {}
+        Log.d("myapp", "SOCKET DISCONNECTED2");
     }
 
     @Override
     public void onError(String error) {
         Log.d("myapp", error);
+    }
+
+    @Override
+    public void onJSON(JSONObject json, Acknowledge acknowledge) {
+
+    }
+
+    @Override
+    public void onString(String string, Acknowledge acknowledge) {
+
     }
 }

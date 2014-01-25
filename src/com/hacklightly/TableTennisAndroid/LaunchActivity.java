@@ -3,6 +3,7 @@ package com.hacklightly.TableTennisAndroid;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -51,13 +52,36 @@ public class LaunchActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.qr_button) {
-        Intent qrDroid = new Intent("la.droid.qr.scan");
-        startActivityForResult(qrDroid, 0);
+
+
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+
+                    Intent i = new Intent ("la.droid.qr.scan");
+                    LaunchActivity.this.startActivityForResult(i, 0);
+                    //Apply splash exit (fade out) and main entry (fade in) animation transitions.
+                    overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+                }
+            }, 300);
         }
         else {
             //about
-            Intent i = new Intent(LaunchActivity.this, AboutActivity.class);
-            startActivity(i);
+
+
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    //Create an intent that will start the main activity.
+                    Intent i = new Intent(LaunchActivity.this, AboutActivity.class);
+                    LaunchActivity.this.startActivity(i);
+                    //Apply splash exit (fade out) and main entry (fade in) animation transitions.
+                    overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+                }
+            }, 300);
         }
     }
 
@@ -65,13 +89,14 @@ public class LaunchActivity extends Activity implements View.OnClickListener{
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         try {
-        String result = data.getExtras().getString("la.droid.qr.result");
 
-        Log.d("myapp", result);
+            String result = data.getExtras().getString("la.droid.qr.result");
+            Log.d("myapp", "pass to session: " + result);
 
-        Intent i = new Intent (LaunchActivity.this, SessionActivity.class);
-         i.putExtra("id", result);
-        startActivity(i);
+            Intent i = new Intent (LaunchActivity.this, SessionActivity.class);
+            i.putExtra("id", result);
+            LaunchActivity.this.startActivity(i);
+
         }
         catch (NullPointerException e) {
             Log.d ("myapp", "QR Droid farted");

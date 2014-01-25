@@ -1,7 +1,9 @@
 package com.hacklightly.TableTennisAndroid;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -32,10 +34,32 @@ public class AboutActivity extends Activity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+
+                        finish();
+                        //Apply splash exit (fade out) and main entry (fade in) animation transitions.
+                        overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+                    }
+                }, 300);
             }
         });
 
 
     }
+
+    @Override
+    public void onDestroy () {
+        super.onDestroy();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Apply splash exit (fade out) and main entry (fade in) animation transitions.
+                overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+            }
+        }, 300);
+}
 }
