@@ -6466,7 +6466,7 @@ Methods (count = 15):
     Access flags: 0x1
       = public void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 146, locals = 2, stack = 4):
+    + Code attribute instructions (code length = 154, locals = 2, stack = 4):
       [0] aload_0 v0
       [1] iconst_1
       [2] invokevirtual #113
@@ -6565,22 +6565,28 @@ Methods (count = 15):
       [121] iconst_0
       [122] putfield #81
         + Fieldref [com/hacklightly/TableTennisAndroid/SessionActivity.l I]
-      [125] ldc #20
+      [125] iconst_0
+      [126] putstatic #72
+        + Fieldref [com/hacklightly/TableTennisAndroid/SessionActivity.c I]
+      [129] iconst_0
+      [130] putstatic #73
+        + Fieldref [com/hacklightly/TableTennisAndroid/SessionActivity.d I]
+      [133] ldc #20
         + String [http://telepong.herokuapp.com]
-      [127] new #49
+      [135] new #49
         + Class [com/hacklightly/TableTennisAndroid/i]
-      [130] dup
-      [131] aload_0 v0
-      [132] invokespecial #115
-        + Methodref [com/hacklightly/TableTennisAndroid/i.<init> (Lcom/hacklightly/TableTennisAndroid/SessionActivity;)V]
-      [135] new #37
-        + Class [android/os/Handler]
       [138] dup
-      [139] invokespecial #101
+      [139] aload_0 v0
+      [140] invokespecial #115
+        + Methodref [com/hacklightly/TableTennisAndroid/i.<init> (Lcom/hacklightly/TableTennisAndroid/SessionActivity;)V]
+      [143] new #37
+        + Class [android/os/Handler]
+      [146] dup
+      [147] invokespecial #101
         + Methodref [android/os/Handler.<init> ()V]
-      [142] invokestatic #107
+      [150] invokestatic #107
         + Methodref [com/b/a/a/a/j.a (Ljava/lang/String;Lcom/b/a/a/a/b;Landroid/os/Handler;)V]
-      [145] return
+      [153] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onResume()V
