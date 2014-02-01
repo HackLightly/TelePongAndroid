@@ -7,7 +7,10 @@ Hosted at telepong.herokuapp.com
 Installation
 ============
 
-Download TelePong.apk to your Android Device.
+Option 1) Install the app from the Play Store: http://bit.ly/1ls4750 
+OR
+Option 2) Download TelePong.apk to your Android Device.
+
 *You must be running Android 4.0 or later for this app to work*
 
 Launch the app and visit telepong.herokuapp.com to get started.
