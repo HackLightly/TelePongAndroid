@@ -3,6 +3,7 @@ package com.hacklightly.TableTennisAndroid;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
@@ -61,11 +62,22 @@ public class LaunchActivity extends Activity implements View.OnClickListener{
                 @Override
                 public void run() {
 
-
+                    try {
                     Intent i = new Intent ("la.droid.qr.scan");
                     LaunchActivity.this.startActivityForResult(i, 0);
                     //Apply splash exit (fade out) and main entry (fade in) animation transitions.
                     overridePendingTransition(R.anim.mainfadein, R.anim.splashfadeout);
+                    }
+                    catch (Exception e) {
+                        Log.d ("myapp", "QR Droid not installed!");
+
+                        final String appPackageName = "la.droid.qr";
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                        } catch (android.content.ActivityNotFoundException anfe) {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
+                        }
+                    }
                 }
             }, 300);
         }

@@ -5096,42 +5096,80 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [java/lang/Runnable]
 
-Constant Pool (count = 37):
+Constant Pool (count = 75):
   + Integer [2130968576]
   + Integer [2130968577]
+  + String [QR Droid not installed!]
+  + String [android.intent.action.VIEW]
+  + String [http://play.google.com/store/apps/details?id=la.droid.qr]
+  + String [la.droid.qr]
   + String [la.droid.qr.scan]
+  + String [market://details?id=la.droid.qr]
+  + String [myapp]
+  + Class [android/content/ActivityNotFoundException]
   + Class [android/content/Intent]
+  + Class [android/net/Uri]
+  + Class [android/util/Log]
   + Class [com/hacklightly/TableTennisAndroid/LaunchActivity]
   + Class [com/hacklightly/TableTennisAndroid/d]
+  + Class [java/lang/Exception]
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
+  + Class [java/lang/String]
   + Fieldref [com/hacklightly/TableTennisAndroid/d.a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
   + Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
+  + Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
+  + Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
+  + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
   + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.overridePendingTransition (II)V]
+  + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.startActivity (Landroid/content/Intent;)V]
   + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.startActivityForResult (Landroid/content/Intent;I)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Landroid/net/Uri;)V]
   + NameAndType [a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
+  + NameAndType [d (Ljava/lang/String;Ljava/lang/String;)I]
   + NameAndType [overridePendingTransition (II)V]
+  + NameAndType [parse (Ljava/lang/String;)Landroid/net/Uri;]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
   + NameAndType [startActivityForResult (Landroid/content/Intent;I)V]
   + Utf8 [()V]
   + Utf8 [(II)V]
+  + Utf8 [(Landroid/content/Intent;)V]
   + Utf8 [(Landroid/content/Intent;I)V]
   + Utf8 [(Lcom/hacklightly/TableTennisAndroid/LaunchActivity;)V]
+  + Utf8 [(Ljava/lang/String;)Landroid/net/Uri;]
   + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Landroid/net/Uri;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
+  + Utf8 [QR Droid not installed!]
+  + Utf8 [StackMapTable]
   + Utf8 [a]
+  + Utf8 [android.intent.action.VIEW]
+  + Utf8 [android/content/ActivityNotFoundException]
   + Utf8 [android/content/Intent]
+  + Utf8 [android/net/Uri]
+  + Utf8 [android/util/Log]
   + Utf8 [com/hacklightly/TableTennisAndroid/LaunchActivity]
   + Utf8 [com/hacklightly/TableTennisAndroid/d]
+  + Utf8 [d]
+  + Utf8 [http://play.google.com/store/apps/details?id=la.droid.qr]
+  + Utf8 [java/lang/Exception]
   + Utf8 [java/lang/Object]
   + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/String]
+  + Utf8 [la.droid.qr]
   + Utf8 [la.droid.qr.scan]
+  + Utf8 [market://details?id=la.droid.qr]
+  + Utf8 [myapp]
   + Utf8 [overridePendingTransition]
+  + Utf8 [parse]
   + Utf8 [run]
+  + Utf8 [startActivity]
   + Utf8 [startActivityForResult]
 
 Fields (count = 1):
@@ -5147,10 +5185,10 @@ Methods (count = 2):
     + Code attribute instructions (code length = 10, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #9
+      [2] putfield #20
         + Fieldref [com/hacklightly/TableTennisAndroid/d.a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
       [5] aload_0 v0
-      [6] invokespecial #13
+      [6] invokespecial #28
         + Methodref [java/lang/Object.<init> ()V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -5159,34 +5197,88 @@ Methods (count = 2):
     Access flags: 0x1
       = public void run()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 31, locals = 2, stack = 3):
-      [0] new #4
+    + Code attribute instructions (code length = 92, locals = 4, stack = 5):
+      [0] new #11
         + Class [android/content/Intent]
       [3] dup
-      [4] ldc #3
+      [4] ldc #7
         + String [la.droid.qr.scan]
-      [6] invokespecial #10
+      [6] invokespecial #21
         + Methodref [android/content/Intent.<init> (Ljava/lang/String;)V]
       [9] astore_1 v1
       [10] aload_0 v0
-      [11] getfield #9
+      [11] getfield #20
         + Fieldref [com/hacklightly/TableTennisAndroid/d.a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
       [14] aload_1 v1
       [15] iconst_0
-      [16] invokevirtual #12
+      [16] invokevirtual #27
         + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [19] aload_0 v0
-      [20] getfield #9
+      [20] getfield #20
         + Fieldref [com/hacklightly/TableTennisAndroid/d.a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
       [23] ldc #1
         + Integer [2130968576]
       [25] ldc #2
         + Integer [2130968577]
-      [27] invokevirtual #11
+      [27] invokevirtual #25
         + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.overridePendingTransition (II)V]
-      [30] return
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
+      [30] goto +61 (target=91)
+      [33] astore_1 v1
+      [34] ldc #9
+        + String [myapp]
+      [36] ldc #3
+        + String [QR Droid not installed!]
+      [38] invokestatic #24
+        + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
+      [41] pop
+      [42] ldc #6
+        + String [la.droid.qr]
+      [44] astore_2 v2
+      [45] aload_0 v0
+      [46] getfield #20
+        + Fieldref [com/hacklightly/TableTennisAndroid/d.a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
+      [49] new #11
+        + Class [android/content/Intent]
+      [52] dup
+      [53] ldc #4
+        + String [android.intent.action.VIEW]
+      [55] ldc #8
+        + String [market://details?id=la.droid.qr]
+      [57] invokestatic #23
+        + Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
+      [60] invokespecial #22
+        + Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
+      [63] invokevirtual #26
+        + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.startActivity (Landroid/content/Intent;)V]
+      [66] goto +25 (target=91)
+      [69] astore_3 v3
+      [70] aload_0 v0
+      [71] getfield #20
+        + Fieldref [com/hacklightly/TableTennisAndroid/d.a Lcom/hacklightly/TableTennisAndroid/LaunchActivity;]
+      [74] new #11
+        + Class [android/content/Intent]
+      [77] dup
+      [78] ldc #4
+        + String [android.intent.action.VIEW]
+      [80] ldc #5
+        + String [http://play.google.com/store/apps/details?id=la.droid.qr]
+      [82] invokestatic #23
+        + Methodref [android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;]
+      [85] invokespecial #22
+        + Methodref [android/content/Intent.<init> (Ljava/lang/String;Landroid/net/Uri;)V]
+      [88] invokevirtual #26
+        + Methodref [com/hacklightly/TableTennisAndroid/LaunchActivity.startActivity (Landroid/content/Intent;)V]
+      [91] return
+      Code attribute exceptions (count = 2):
+      - ExceptionInfo (0 -> 30: 33):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (45 -> 66: 69):
+      + Class [android/content/ActivityNotFoundException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 3):
+        - [33] Var: ..., Stack: [a:java/lang/Exception]
+        - [69] Var: [a:com/hacklightly/TableTennisAndroid/d][a:java/lang/Exception][a:java/lang/String], Stack: [a:android/content/ActivityNotFoundException]
+        - [91] Var: -2, Stack: (empty)
 
 Class file attributes (count = 0):
 
